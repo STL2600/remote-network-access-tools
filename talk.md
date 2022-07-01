@@ -67,6 +67,41 @@ Setup your tunnel
 
 # Wireguard
 
+Server Config
+
+```
+[Interface]
+Address = 10.0.0.1/24
+ListenPort = 1234
+PrivateKey = <SERVER PRIVATE KEY>
+
+[Peer]
+PublicKey = <CLIENT PUBLIC KEY>
+AllowedIPs = 10.0.0.1/24
+```
+
+# Wireguard
+
+Client Config
+
+```
+[Interface]
+Address = 10.0.0.2/24
+PrivateKey = <CLIENT PRIVATE KEY>
+
+[Peer]
+PublicKey = <CLIENT PUBLIC KEY>
+AllowedIPs = 10.0.0.1/24
+Endpoint = 1.2.3.4
+```
+
+# Wireguard
+
+`wg-quick up <config file>`
+`wg-quick down <config file>`
+
+# Wireguard
+
  - Pros
    - Ultra simple config, just a file
    - Secure public key based auth and encryption
@@ -101,6 +136,8 @@ Setup your tunnel
    - Very fast
    - Low resource usage
    - Generous free tier and affordable paid options
+   - Clients for most systems
+   - Company can not see traffic
  - Cons
    - DNS solutions are spotty
 
@@ -120,6 +157,7 @@ Setup your tunnel
  - Cons
    - DNS solutions are spotty
    - Free tier is less generous than others
+   - Company can see traffic
 
 Twingate - Joe
 Pritunl - Joe
