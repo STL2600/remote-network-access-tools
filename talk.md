@@ -57,7 +57,24 @@ Setup your tunnel
 
 # Self Hosted VPN
 
-# OpenVPN - Joe
+# OpenVPN
+
+- Point-to-point or site-to-site VPN
+- Authenticate by
+  - Pre-shared keys
+  - Username/password
+- Based around OpenSSL for encryption
+
+## OpenVPN
+
+- Pros
+  - Open Source
+  - Tried and True
+  - Lot's of features
+- Cons
+  - Can be tricky to setup
+  - Long in the tooth
+  - Not the quickest solution
 
 # Wireguard
 
@@ -159,13 +176,70 @@ Endpoint = 1.2.3.4
    - Free tier is less generous than others
    - Company can see traffic
 
-Twingate - Joe
-Pritunl - Joe
-Enclave.io - Joe
+# Twingate
+
+- TLS Tunnel
+- Deploys to cloud platform of your choice
+- Hosts Relay and Controller components
+- Connectors in the cloud function as gateways the network
+- Clients for just about every device
+
+## Twingate
+
+- Pros
+  - Lots of public documentation
+  - Appears to be pretty flexible
+- Cons
+  - Pretty buzzword laden
+  - Corporate focused
+  - Not as simple to setup
+
+# Pritunl
+
+- Distributed openvpn, ipsec, and wireguard server
+- Designed to join multiple cloud sites on one network
+- Offers up to 5 layers of authentication
+
+## Pritunl
+
+!["If it says so on the website, it must be true"](images/pritunl.png)
+
+
+## Pritunl
+
+- Pros
+  - Multiple protocols available
+  - Open Source
+  - Free tier for a single server
+  - Pretty well documented
+- Cons
+  - Doesn't appear to be the simplest setup
+  - Just GUI for existing VPN tech
+
+# Enclave.io
+
+- Peer-to-peer VPN.  No gateway server
+- Group devices by "tags"
+
+## Enclave.io
+
+- Pros
+  - Time limited connectivity
+  - Reasonabl cost
+    - Free tier up to 5 systems
+    - Business tier $1.60 per system/month
+  - Synology NAS client
+- Cons
+  - MFA requires Enterprise plan
+  - Documentation pretty minimal
 
 # Self Hosted Virtual Network
 
-Nebula - Joe
+## Nebula
+
+- Open source project by Slack
+- Based on Noise Protocol (WhatsApp, WireGuard, I2P)
+- Basically rage-built out of frustration with IPSec
 
 ## Zerotier
 
